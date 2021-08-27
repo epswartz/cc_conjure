@@ -76,11 +76,11 @@ function all_inventory()
 
     while chest ~= nil do
         for idx,item in chest.list() do
-            item_id = item.name + "/" + tostring(item.damage)
+            item_id = item.name .. "/" .. tostring(item.damage)
             if inventory[item_id] == nil then
                 inventory[item_id] = 0
             end
-            inventory[item_id] += item.count
+            inventory[item_id] = inventory[item_id] + item.count
         end
         turtle.upOrErr(1)
         chest = peripheral.find(CHEST_PERIPHERAL)
