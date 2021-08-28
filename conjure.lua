@@ -57,6 +57,14 @@ function all_inventory()
 end
 
 
+-- Read entire file into string.
+function slurp(path)
+  local f = io.open(path)
+  local s = f:read("*a")
+  f:close()
+  return s
+end
+
 -- Load a table from given file.
 function load_table(filepath)
   return json.decode(slurp(filepath))
@@ -103,5 +111,7 @@ function inventory_has_needed()
 
     return inventory_is_subset(inventory, needed)
 end
+
+
 
 print(inventory_has_needed())
