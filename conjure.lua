@@ -77,7 +77,7 @@ end
 -- Given a schematic table, read through the layers and determine the items needed.
 -- Outputs in the same format as the all_inventory - single string ids as key, counts as value.
 function needed_inventory(schematic)
-    needed = {}
+    local needed = {}
     for _,layer in ipairs(schematic.layers) do
         for _,row in ipairs(layer) do
             for _, id in ipairs(row) do
@@ -104,9 +104,9 @@ function inventory_is_subset(inventory, needed)
 end
 
 function inventory_has_needed()
-    inventory = all_inventory()
-    schematic = read_schematic()
-    needed = needed_inventory(schematic)
+    local inventory = all_inventory()
+    local schematic = read_schematic()
+    local needed = needed_inventory(schematic)
 
     return inventory_is_subset(inventory, needed)
 end
