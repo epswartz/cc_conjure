@@ -12,7 +12,6 @@ require "conjure_lib/move"
 require "conjure_lib/log"
 json = require "conjure_lib/json"
 require "conjure_lib/convert"
-require "conjure_lib/files"
 
 -- Constants
 CHEST_PERIPHERAL = "minecraft:chest"
