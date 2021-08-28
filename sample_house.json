@@ -1,0 +1,284 @@
+{
+    "size": {
+        "x": 5,
+        "z": 5
+    },
+    "layers": [
+        [
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {},
+                {},
+                {},
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {},
+                {},
+                {},
+                {},
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {},
+                {},
+                {},
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ]
+        ],
+        [
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {},
+                {},
+                {},
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {},
+                {},
+                {},
+                {},
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {},
+                {},
+                {},
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ]
+        ],
+        [
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ],
+            [
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                },
+                {
+                    "id": "minecraft:planks/2",
+                    "damage": 0
+                }
+            ]
+        ]
+    ]
+}

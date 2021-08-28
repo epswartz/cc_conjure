@@ -21,9 +21,9 @@ INITIAL_FUEL = 200 -- Fuel requirement to check inventory column.
     -- There are no other inventories (this means none of the chests are doubles)
     -- Turtle has at least 200 fuel (to reach top of inventory column).
 function all_inventory()
-    inventory = {}
+    local inventory = {}
 
-    chest = peripheral.find(CHEST_PERIPHERAL)
+    local chest = peripheral.find(CHEST_PERIPHERAL)
     if chest == nil then
         error("Cannot find an adjacent chest. Please see setup document.")
     end
@@ -32,7 +32,7 @@ function all_inventory()
         error("Please inset more fuel before beginning: " .. INITIAL_FUEL .. " total fuel is required.")
     end
 
-    height = 0
+    local height = 0
 
     while chest ~= nil do
         for idx,item in pairs(chest.list()) do
@@ -52,4 +52,5 @@ function all_inventory()
     return inventory
 end
 
-print(dump(all_inventory()))
+go(5,5,5)
+go(0,-1,0)
