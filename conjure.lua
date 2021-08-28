@@ -35,7 +35,7 @@ function all_inventory()
     height = 0
 
     while chest ~= nil do
-        for idx,item in chest.list() do
+        for idx,item in pairs(chest.list()) do
             item_id = item.name .. "/" .. tostring(item.damage)
             if inventory[item_id] == nil then
                 inventory[item_id] = 0
