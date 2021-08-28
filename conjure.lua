@@ -43,6 +43,7 @@ function all_inventory()
             inventory[item_id] = inventory[item_id] + item.count
         end
         upOrErr(1)
+        height = height + 1
         chest = peripheral.find(CHEST_PERIPHERAL)
     end
 
