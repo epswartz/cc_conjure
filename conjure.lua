@@ -53,4 +53,4 @@ function all_inventory()
 end
 
 go(5,5,5)
-go(0,-1,0)
+go(0,0,-1)
