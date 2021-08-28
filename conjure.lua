@@ -7,59 +7,12 @@
 --     / /  \ \  | |\ \  \7
 --      "     "    "  "
 
+require "conjure_lib/move"
+require "conjure_lib/log"
+
 -- Constants
 CHEST_PERIPHERAL = "minecraft:chest"
-
--- Utilities
-
--- Dump a table to string.
-function dump(o)
-    if type(o) == 'table' then
-       local s = '{ '
-       for k,v in pairs(o) do
-          if type(k) ~= 'number' then k = '"'..k..'"' end
-          s = s .. '['..k..'] = ' .. dump(v) .. ','
-       end
-       return s .. '} '
-    else
-       return tostring(o)
-    end
- end
-
-
--- Movement Functions
-function upOrErr(dist)
-    for i=1,dist,1 do
-        if not turtle.up() then
-            error("Cannot move inside move or die function: upOrErr()")
-        end
-    end
-end
-
-function downOrErr(dist)
-    for i=1,dist,1 do
-        if not turtle.down() then
-            error("Cannot move inside move or die function: downOrErr()")
-        end
-    end
-end
-
-function fwdOrErr(dist)
-    for i=1,dist,1 do
-        if not turtle.forward() then
-            error("Cannot move inside move or die function: fwdOrErr()")
-        end
-    end
-end
-
-function bkOrErr(dist)
-    for i=1,dist,1 do
-        if not turtle.back() then
-            error("Cannot move inside move or die function: upOrErr()")
-        end
-    end
-end
-
+INITIAL_FUEL = 200 -- Fuel requirement to check inventory column.
 
 -- Returns a table of inventory entries. Each entry is itself a table,
 -- with the item/damage value as key, and counts as the values.
@@ -71,6 +24,13 @@ function all_inventory()
     inventory = {}
 
     chest = peripheral.find(CHEST_PERIPHERAL)
+    if chest == nil then
+        error("Cannot find an adjacent chest. Please see setup document.")
+    end
+
+    if turtle.getFuelLevel() < INITIAL_FUEL then
+        error("Please inset more fuel before beginning: " .. INITIAL_FUEL .. " total fuel is required.")
+    end
 
     height = 0
 
@@ -82,11 +42,11 @@ function all_inventory()
             end
             inventory[item_id] = inventory[item_id] + item.count
         end
-        turtle.upOrErr(1)
+        upOrErr(1)
         chest = peripheral.find(CHEST_PERIPHERAL)
     end
 
-    turtle.downOrErr(height)
+    downOrErr(height)
 
     return inventory
 end
