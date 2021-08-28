@@ -1,283 +1,119 @@
 {
     "size": {
         "x": 5,
+        "y": 3,
         "z": 5
     },
     "layers": [
         [
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3"
             ],
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {},
-                {},
-                {},
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "",
+                "",
+                "",
+                "minecraft:planks/3"
             ],
             [
-                {},
-                {},
-                {},
-                {},
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "",
+                "",
+                "",
+                "",
+                "minecraft:planks/3"
             ],
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {},
-                {},
-                {},
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "",
+                "",
+                "",
+                "minecraft:planks/3"
             ],
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3"
             ]
         ],
         [
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3"
             ],
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {},
-                {},
-                {},
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "",
+                "",
+                "",
+                "minecraft:planks/3"
             ],
             [
-                {},
-                {},
-                {},
-                {},
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "",
+                "",
+                "",
+                "",
+                "minecraft:planks/3"
             ],
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {},
-                {},
-                {},
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "",
+                "",
+                "",
+                "minecraft:planks/3"
             ],
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3"
             ]
         ],
         [
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3"
             ],
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3"
             ],
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3"
             ],
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3"
             ],
             [
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                },
-                {
-                    "id": "minecraft:planks/2",
-                    "damage": 0
-                }
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3",
+                "minecraft:planks/3"
             ]
         ]
     ]

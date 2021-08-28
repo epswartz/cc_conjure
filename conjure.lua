@@ -7,8 +7,11 @@
 --     / /  \ \  | |\ \  \7
 --      "     "    "  "
 
+
 require "conjure_lib/move"
 require "conjure_lib/log"
+json = require "conjure_lib/json"
+require "conjure_lib/convert"
 
 -- Constants
 CHEST_PERIPHERAL = "minecraft:chest"
@@ -52,6 +55,52 @@ function all_inventory()
     return inventory
 end
 
-go(5,5,5)
-go(0,0,-1)
-face(0)
+
+-- Load a table from given file.
+function load_table(filepath)
+  return json.decode(slurp(filepath))
+end
+
+-- Read the schematic file passed in by cli.
+function read_schematic()
+    return load_table(arg[1])
+end
+
+-- Given a schematic table, read through the layers and determine the items needed.
+-- Outputs in the same format as the all_inventory - single string ids as key, counts as value.
+function needed_inventory(schematic)
+    needed = {}
+    for _,layer in ipairs(schematic.layers) do
+        for _,row in ipairs(layer) do
+            for _, id in ipairs(row) do
+                if id ~= "" then
+                    if needed[id] == nil then
+                        needed[id] = 1
+                    else
+                        needed[id] = needed[id] + 1
+                    end
+                end
+            end
+        end
+    end
+    return needed
+end
+
+function inventory_is_subset(inventory, needed)
+    for _,id in ipairs(needed) do
+        if inventory[id] == nil or inventory[id] < needed[id] then
+            return false
+        end
+    end
+    return true
+end
+
+function inventory_has_needed()
+    inventory = all_inventory()
+    schematic = read_schematic()
+    needed = needed_inventory(schematic)
+
+    return inventory_is_subset(inventory, needed)
+end
+
+print(inventory_has_needed())
