@@ -95,8 +95,8 @@ function needed_inventory(schematic)
 end
 
 function inventory_is_subset(inventory, needed)
-    for _,id in ipairs(needed) do
-        if inventory[id] == nil or inventory[id] < needed[id] then
+    for id,quantity in ipairs(needed) do
+        if inventory[id] == nil or inventory[id] < quantity then
             return false
         end
     end
