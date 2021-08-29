@@ -1,10 +1,10 @@
 -- Movement and Routing Functions
 
--- Relative movement system initialiation
+-- Relative movement system initialization
 turtle.x = 0
 turtle.z = -1
 turtle.y = 0
-turtle.build_height = 0
+turtle.build_height = -1 -- The highest level on which any block has already been placed.
 
 -- Turtle facings:
 -- 0: +Z
