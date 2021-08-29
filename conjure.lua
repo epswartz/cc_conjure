@@ -167,7 +167,7 @@ function fetch_from_inventory_column()
         end
         upOrErr(1)
     end
-    go(0,0,-1)
+    go(1,1,0)
     face(0)
 end
 
@@ -217,10 +217,10 @@ function main()
         -- Figure out what to pick up from inventory.
         while inventory_add(schematic.layers[next_pickup_pos[1]][next_pickup_pos[2]][next_pickup_pos[3]]) do
             if next_pickup_pos[3] == schematic.size.x then
-                next_pickup_pos[3] = 0
+                next_pickup_pos[3] = 1
                 next_pickup_pos[2] = next_pickup_pos[2] + 1
             elseif next_pickup_pos[2] == schematic.size.z then
-                next_pickup_pos[2] == 0
+                next_pickup_pos[2] = 1
                 next_pickup_pos[1] = next_pickup_pos[1] + 1
             elseif next_pickup_pos[1] > schematic.size.y then
                 break
@@ -240,10 +240,10 @@ function main()
             next_place_pos[3] -- Column (x)
         ) do
             if next_place_pos[3] == schematic.size.x then
-                next_place_pos[3] = 0
+                next_place_pos[3] = 1
                 next_place_pos[2] = next_place_pos[2] + 1
             elseif next_place_pos[2] == schematic.size.z then
-                next_place_pos[2] == 0
+                next_place_pos[2] = 1
                 next_place_pos[1] = next_place_pos[1] + 1
             elseif next_place_pos[1] > schematic.size.y then
                 break
@@ -253,7 +253,7 @@ function main()
         end
 
         -- Return to base
-        go(0,0,-1)
+        go(1,1,0)
         face(0)
         reset_inventory()
     end
