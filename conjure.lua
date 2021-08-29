@@ -204,6 +204,7 @@ function main()
         for row_idx, row in ipairs(layer) do
             if len(row) ~= schematic.size.x then
                 print("Row " .. row_idx .. " of layer " .. idx .. " has incorrect number of items, based on schematic x-axis size.")
+            end
         end
     end
 
