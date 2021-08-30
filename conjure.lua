@@ -210,6 +210,7 @@ function main()
 
     if not correct then
         error("Cannot continue, schematic is malformed. Change layers or size declaration.")
+    end
 
     next_place_pos = {0,0,0} -- Track blocks placed
     while next_place_pos[1] < schematic.y.size + 1 do
