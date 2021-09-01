@@ -195,7 +195,6 @@ function main()
 
     -- Schematic size / layer symmetry check.
     local correct = true
-    print("Layers: " .. dump(layers))
     if len(layers) ~= schematic.size.y then
         print("Unexpected number of layers. Actual: ".. len(layers) .. ", Expected: " .. schematic.size.y)
         correct = false
@@ -218,7 +217,8 @@ function main()
 
     next_place_pos = {0,0,0} -- Track blocks placed
     while next_place_pos[1] < schematic.size.y + 1 do
-        next_pickup_pos = clone(next_place_pos) -- Track blocks picked up into inventory
+        local next_pickup_pos = clone(next_place_pos) -- Track blocks picked up into inventory
+        print("next_pickup_pos: " .. dump(next_pickup_pos))
 
         -- Figure out what to pick up from inventory.
         while inventory_add(schematic.layers[next_pickup_pos[1]][next_pickup_pos[2]][next_pickup_pos[3]]) do

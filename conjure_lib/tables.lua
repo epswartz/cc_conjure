@@ -9,5 +9,5 @@ end
 
 -- copy table.
 function clone(T)
-    return {table.unpack(T)}
-  end
+  return {table.unpack(T)}
+end
