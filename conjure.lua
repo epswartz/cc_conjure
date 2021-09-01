@@ -193,6 +193,7 @@ function main()
 
     -- Schematic size / layer symmetry check.
     local correct = true
+    print("Layers: " .. dump(layers))
     if len(layers) ~= schematic.size.y then
         print("Unexpected number of layers. Actual: ".. len(layers) .. ", Expected: " .. schematic.size.y)
         correct = false
