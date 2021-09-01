@@ -153,6 +153,7 @@ end
 function fetch_from_inventory_column()
     if turtle.x ~= 0 or turtle.y ~= 0 or turtle.z ~= -1 then
         error("Turtle is not in starting spot when fetch_from_inventory_column() was called.")
+    end
     while has_items(turtle.inventory) do
         local chest = peripheral.find(CHEST_PERIPHERAL)
         if chest == nil then
