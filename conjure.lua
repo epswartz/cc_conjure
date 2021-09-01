@@ -191,6 +191,8 @@ function main()
         error()
     end
 
+    local layers = schematic.layers
+
     -- Schematic size / layer symmetry check.
     local correct = true
     print("Layers: " .. dump(layers))
