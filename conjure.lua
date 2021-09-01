@@ -125,6 +125,9 @@ end
 function place_block_down(id)
     for slot=1,16,1 do
         turtle.select(slot)
+        item = turtle.getItemDetail()
+        if item ~= nil then
+            return false
         item = itemDetailToItemKey(turtle.getItemDetail())
         if item == id then
             if not turtle.placeDown() then
