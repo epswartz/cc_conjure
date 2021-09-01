@@ -244,7 +244,7 @@ function main()
             end
         end
 
-        if not has_items(turtle.inventory)
+        if not has_items(turtle.inventory) then
             print("No more items to place. Done!")
         end
         -- Actually obtain those items from inventory column
