@@ -217,7 +217,7 @@ function main()
     end
 
     next_place_pos = {0,0,0} -- Track blocks placed
-    while next_place_pos[1] < schematic.y.size + 1 do
+    while next_place_pos[1] < schematic.size.y + 1 do
         next_pickup_pos = clone(next_place_pos) -- Track blocks picked up into inventory
 
         -- Figure out what to pick up from inventory.
