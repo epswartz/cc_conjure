@@ -23,8 +23,8 @@ function reset_inventory()
 end
 
 function has_items(turtle_inventory)
-    for slot,item in pairs(turtle.inventory) do
-        if item.id ~= nil and item.quantity > 0 then
+    for slot,item in pairs(turtle_inventory) do
+        if item ~= nil and item.quantity > 0 then
             return true
         end
     end

@@ -165,7 +165,9 @@ function fetch_from_inventory_column()
         for c_slot,c_item in pairs(chest.list()) do
             for t_slot,t_item in pairs(turtle.inventory) do
                 if (c_item.name .. "/" .. c_item.damage) == t_item.id then
-                    chest.pullItems(peripheral.getName(chest), c_slot, math.min(c_item.quantity, t_item.quantity), t_slot)
+                    local pull_amt = math.min(c_item.quantity, t_item.quantity)
+                    chest.pullItems(peripheral.getName(chest), c_slot, pull_amt, t_slot)
+                    turtle.inventory[t_slot] = turtle.inventory[t_slot] - pull_amt
                 end
             end
         end
