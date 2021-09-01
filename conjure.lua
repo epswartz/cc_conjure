@@ -128,6 +128,7 @@ function place_block_down(id)
         item = turtle.getItemDetail()
         if item ~= nil then
             return false
+        end
         item = itemDetailToItemKey(item)
         if item == id then
             if not turtle.placeDown() then
