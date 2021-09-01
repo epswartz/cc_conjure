@@ -151,7 +151,7 @@ end
 
 -- Reads turtle.inventory, and grabs everything out of the inventory column that is listed there.
 function fetch_from_inventory_column()
-    if turtle.x ~= 0 or turtle.y ~= 0 or turtle.z ~= -1 then
+    if turtle.x ~= 1 or turtle.y ~= 1 or turtle.z ~= 0 then
         error("Turtle is not in starting spot when fetch_from_inventory_column() was called.")
     end
     while has_items(turtle.inventory) do
