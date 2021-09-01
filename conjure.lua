@@ -222,6 +222,8 @@ function main()
 
         -- Figure out what to pick up from inventory.
         while inventory_add(schematic.layers[next_pickup_pos[1]][next_pickup_pos[2]][next_pickup_pos[3]]) do
+            print(next_pickup_pose[1] .. ", " .. next_pickup_pose[2] .. ", " .. next_pickup_pose[3] .. ": ",
+                schematic.layers[next_pickup_pos[1]][next_pickup_pos[2]][next_pickup_pos[3]])
             if next_pickup_pos[3] == schematic.size.x then
                 next_pickup_pos[3] = 1
                 next_pickup_pos[2] = next_pickup_pos[2] + 1
