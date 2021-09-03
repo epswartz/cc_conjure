@@ -183,10 +183,10 @@ function main()
 
     -- Check inventory readiness,
     -- whether we have all the required mats.
-    local inventory = all_inventory() -- All in inventory column.
-    local schematic = read_schematic()
-    local needed = needed_inventory(schematic)
-    local inventory_ready, missing_mats = missing_inventory(inventory, needed)
+    inventory = all_inventory() -- All in inventory column.
+    schematic = read_schematic()
+    needed = needed_inventory(schematic)
+    inventory_ready, missing_mats = missing_inventory(inventory, needed)
     if not inventory_ready then
         print("Inventory column is missing building materials.")
         print("Please insert: ")
@@ -222,25 +222,29 @@ function main()
     end
 
     next_place_pos = {1,1,1} -- Track blocks placed
-    while next_place_pos[1] < schematic.size.y + 1 do
+    while
+        next_place_pos[1] < schematic.size.y or
+        next_place_pos[2] < schematic.size.z or
+        next_place_pos[3] < schematic.size.x
+     do
         reset_inventory()
         local next_pickup_pos = clone(next_place_pos) -- Track blocks picked up into inventory
-        print("next_pickup_pos: " .. dump(next_pickup_pos))
 
         -- Figure out what to pick up from inventory.
         while inventory_add(schematic.layers[next_pickup_pos[1]][next_pickup_pos[2]][next_pickup_pos[3]]) do
-            print(next_pickup_pose[1] .. ", " .. next_pickup_pose[2] .. ", " .. next_pickup_pose[3] .. ": ",
+            print(next_pickup_pos[1] .. ", " .. next_pickup_pos[2] .. ", " .. next_pickup_pos[3] .. ": ",
                 schematic.layers[next_pickup_pos[1]][next_pickup_pos[2]][next_pickup_pos[3]])
-            if next_pickup_pos[3] == schematic.size.x then
-                next_pickup_pos[3] = 1
-                next_pickup_pos[2] = next_pickup_pos[2] + 1
-            elseif next_pickup_pos[2] == schematic.size.z then
-                next_pickup_pos[2] = 1
-                next_pickup_pos[1] = next_pickup_pos[1] + 1
-            elseif next_pickup_pos[1] > schematic.size.y then
-                break
-            else
+            if next_pickup_pos[3] < schematic.size.x then
                 next_pickup_pos[3] = next_pickup_pos[3] + 1
+            elseif next_pickup_pos[2] < schematic.size.z then
+                next_pickup_pos[2] = next_pickup_pos[2] + 1
+                next_pickup_pos[3] = 1
+            elseif next_pickup_pos[1] < schematic.size.y then
+                next_pickup_pos[1] = next_pickup_pos[1] + 1
+                next_pickup_pos[2] = 1
+                next_pickup_pos[3] = 1
+            else
+                break
             end
         end
 
