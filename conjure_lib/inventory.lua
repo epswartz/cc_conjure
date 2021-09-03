@@ -33,19 +33,22 @@ end
 
 -- Add an item to virtual inventory. Adds the item if it can,
 function inventory_add(id)
-    print("Adding to inventory: " .. id)
+    print("Attempting add to inventory: " .. id)
     for slot,item in ipairs(turtle.inventory) do
         -- See if the item is already there in a non-full stack.
         if item ~= nil and item.id == id and item.quantity < 64 then -- TODO in later versions, non-64-stacking can be supported.
             turtle.inventory[slot].quantity = turtle.inventory[slot].quantity + 1
+            print("Added.")
             return true
         end
     end
     for slot,item in ipairs(turtle.inventory) do
         if item == nil then
             turtle.inventory[slot] = {id = id, quantity = 1}
+            print("Added.")
             return true
         end
     end
+    print("Could not add.")
     return false
 end

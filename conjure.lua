@@ -226,7 +226,7 @@ function main()
         next_place_pos[1] < schematic.size.y or
         next_place_pos[2] < schematic.size.z or
         next_place_pos[3] < schematic.size.x
-     do
+    do
         reset_inventory()
         local next_pickup_pos = clone(next_place_pos) -- Track blocks picked up into inventory
 
