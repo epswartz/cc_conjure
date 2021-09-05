@@ -45,7 +45,7 @@ function inventory_add(id)
         -- See if the item is already there in a non-full stack.
         if len(item) == 0 then
             turtle.inventory[slot] = {id = id, quantity = 1}
-        elseif or (len(item) ~= 0 and item.id == id and item.quantity < 64) then -- TODO in later versions, non-64-stacking can be supported.
+        elseif len(item) ~= 0 and item.id == id and item.quantity < 64 then -- TODO in later versions, non-64-stacking can be supported.
             turtle.inventory[slot].quantity = turtle.inventory[slot].quantity + 1
             print("Added.")
             return true
