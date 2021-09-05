@@ -155,6 +155,7 @@ end
 
 -- Reads turtle.inventory, and grabs everything out of the inventory column that is listed there.
 function fetch_from_inventory_column()
+    print("Fetching Turtle Inventory: " .. dump(turtle.inventory))
     if turtle.x ~= 1 or turtle.y ~= 1 or turtle.z ~= 0 then
         error("Turtle is not in starting spot when fetch_from_inventory_column() was called.")
     end
@@ -263,23 +264,23 @@ function main()
             next_place_pos[2], -- Row (z)
             next_place_pos[3] -- Column (x)
         ) do
-            if next_place_pos[3] == schematic.size.x then
-                next_place_pos[3] = 1
-                next_place_pos[2] = next_place_pos[2] + 1
-            elseif next_place_pos[2] == schematic.size.z then
-                next_place_pos[2] = 1
-                next_place_pos[1] = next_place_pos[1] + 1
-            elseif next_place_pos[1] > schematic.size.y then
-                break
-            else
+            if next_place_pos[3] < schematic.size.x then
                 next_place_pos[3] = next_place_pos[3] + 1
+            elseif next_place_pos[2] < schematic.size.z then
+                next_place_pos[2] = next_place_pos[2] + 1
+                next_place_pos[3] = 1
+            elseif next_place_pos[1] < schematic.size.y then
+                next_place_pos[1] = next_place_pos[1] + 1
+                next_place_pos[2] = 1
+                next_place_pos[3] = 1
+            else
+                break
             end
         end
 
         -- Return to base
         go(1,1,0)
         face(0)
-        reset_inventory()
     end
 end
 
