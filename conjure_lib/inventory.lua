@@ -23,7 +23,7 @@ function reset_inventory()
     }
 end
 
-function is_empty(T)
+function empty(T) -- returns bool
     -- TODO make this by looking at len.
 end
 
@@ -39,6 +39,9 @@ end
 
 -- Add an item to virtual inventory. Adds the item if it can,
 function inventory_add(id)
+    if id == "" then
+        return true
+    end
     -- print("Turtle Inventory: " .. dump(turtle.inventory))
     print("Attempting add to inventory: " .. id)
     for slot,item in ipairs(turtle.inventory) do
@@ -46,7 +49,7 @@ function inventory_add(id)
         if len(item) == 0 then
             turtle.inventory[slot] = {id = id, quantity = 1}
             print("Added to empty.")
-            return false
+            return true
         elseif len(item) ~= 0 and item.id == id and item.quantity < 64 then -- TODO in later versions, non-64-stacking can be supported.
             turtle.inventory[slot].quantity = turtle.inventory[slot].quantity + 1
             print("Added to existing.")
