@@ -151,6 +151,33 @@ function place_at(id, x, y, z)
     return success
 end
 
+-- Move quantity of items from chest slot to this slot.
+-- 1. Swaps item into slot 1 of chest, using slot 27 as extra slot.
+-- 2. Calls turtle.suck(quantity)
+-- Params:
+-- ch: chest peripheral object.
+-- c_slot: slot of chest to withdraw from.
+-- t_slot: slot of turtle to put into.
+-- quantity: number of items.
+function mv_items(ch, c_slot, t_slot, quantity)
+    chest_name = peripheral.getName(ch)
+    -- Move stuff in slot 1 to slot 27
+    ch.pullItems(chest_name, 1, 64, 27)
+
+    -- Move stuff in desired to 1
+    if ch.pullItems(chest_name, c_slot, quantity, 1) ~= quantity then
+        error("quantity wrong")
+    end
+
+    -- Withdraw
+    if not turtle.suck(quantity) then
+        error("turtle.suck() failed")
+    end
+
+    ch.pullItems(chest_name, 27, 64, 1)
+
+end
+
 
 -- Reads turtle.inventory, and grabs everything out of the inventory column that is listed there.
 function fetch_from_inventory_column()
