@@ -286,7 +286,7 @@ function main()
 
         -- Place blocks!
         while place_at(
-            schematic.layers[next_pickup_pos[1]][next_pickup_pos[2]][next_pickup_pos[3]], -- Block id
+            schematic.layers[next_place_pos[1]][next_place_pos[2]][next_place_pos[3]], -- Block id
             next_place_pos[1], -- Layer (y)
             next_place_pos[2], -- Row (z)
             next_place_pos[3] -- Column (x)
