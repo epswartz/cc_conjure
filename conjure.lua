@@ -142,7 +142,7 @@ end
 
 -- Place a block with given id at the given location.
 -- Returns bool successful
-function place_at(id, x, y, z)
+function place_at(id, y, z, x)
     go(x,y+1,z)
     success = place_block_down(id)
     if success and (y > turtle.build_height) then
@@ -251,7 +251,7 @@ function main()
         error("Cannot continue, schematic is malformed. Change layers or size declaration.")
     end
 
-    next_place_pos = {1,1,1} -- Track blocks placed
+    next_place_pos = {1,1,1} -- Track blocks placed. This is {y,z,x}, aka layer, row, col.
     while
         next_place_pos[1] < schematic.size.y or
         next_place_pos[2] < schematic.size.z or
