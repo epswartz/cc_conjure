@@ -37,7 +37,7 @@ function all_inventory()
     end
 
     if turtle.getFuelLevel() < INITIAL_FUEL then
-        error("Please inset more fuel before beginning: " .. INITIAL_FUEL .. " total fuel is required.")
+        error("Please insert more fuel before beginning: " .. INITIAL_FUEL .. " total fuel is required.")
     end
 
     local height = 0
@@ -162,7 +162,7 @@ end
 function mv_items(ch, c_slot, t_slot, quantity)
     chest_name = peripheral.getName(ch)
     -- Move stuff in slot 1 to slot 27
-    ch.pullItems(chest_name, 1, 64, 27)
+    -- ch.pullItems(chest_name, 1, 64, 27)
 
     -- Move stuff in desired to 1
     if ch.pullItems(chest_name, c_slot, quantity, 1) ~= quantity then
