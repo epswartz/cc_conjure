@@ -205,7 +205,7 @@ function fetch_from_inventory_column()
         upOrErr(1)
     end
     go(1,1,0)
-    face(0)
+    face(1)
 end
 
 
@@ -307,7 +307,7 @@ function main()
 
         -- Return to base
         go(1,1,0)
-        face(0)
+        face(1)
     end
 end
 
