@@ -123,6 +123,9 @@ end
 -- Find the block with given id in inventory, and place it below the turtle.
 -- Returns bool successful
 function place_block_down(id)
+    if id == "" then
+        return true
+    end
     for slot=1,16,1 do
         turtle.select(slot)
         item_detail = turtle.getItemDetail()
