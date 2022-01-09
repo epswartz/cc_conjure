@@ -7,11 +7,12 @@ turtle.y = 1
 turtle.build_height = 0 -- The highest level on which any block has already been placed.
 
 -- Turtle facings:
+-- Turtle starts facing the inventory column.
 -- 0: +Z
 -- 1: +X
 -- 2: -Z
 -- 3: -X
-turtle.facing = 0
+turtle.facing = 1
 
 
 -- Go to a particular relative location.
