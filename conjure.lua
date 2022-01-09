@@ -195,7 +195,8 @@ function fetch_from_inventory_column()
                 if len(t_item) ~= 0 then
                     if (c_item.name .. "/" .. c_item.damage) == t_item.id then
                         local pull_amt = math.min(c_item.count, t_item.quantity)
-                        chest.pullItems(peripheral.getName(chest), c_slot, pull_amt, t_slot)
+                        -- chest.pullItems(peripheral.getName(chest), c_slot, pull_amt, t_slot)
+                        mv_items(chest, c_slot, t_slot, pull_amt)
                         turtle.inventory[t_slot].quantity = turtle.inventory[t_slot].quantity - pull_amt
                     end
                 end
